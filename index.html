@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Blog Saya - Template Blogspot</title>
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            body {
+                  font-family: Arial, sans-serif;
+                  background-color: #f5f5f5;
+                  line-height: 1.6;
+                  color: #333;
+            }
+
+            /* Header */
+            header {
+                  background-color: #fff;
+                  border-bottom: 1px solid #ddd;
+                  padding: 20px 0;
+            }
+
+            .header-content {
+                  max-width: 1200px;
+                  margin: 0 auto;
+                  padding: 0 20px;
+            }
+
+            .blog-title {
+                  font-size: 32px;
+                  color: #2196F3;
+                  margin-bottom: 5px;
+            }
+
+            .blog-description {
+                  color: #666;
+                  font-size: 14px;
+            }
+
+            /* Navigation */
+            nav {
+                  background-color: #2196F3;
+                  padding: 12px 0;
+            }
+
+            .nav-content {
+                  max-width: 1200px;
+                  margin: 0 auto;
+                  padding: 0 20px;
+            }
+
+            nav ul {
+                  list-style: none;
+                  display: flex;
+                  gap: 30px;
+            }
+
+            nav a {
+                  color: white;
+                  text-decoration: none;
+                  font-size: 15px;
+                  transition: opacity 0.3s;
+            }
+
+            nav a:hover {
+                  opacity: 0.8;
+            }
+
+            /* Container */
+            .container {
+                  max-width: 1200px;
+                  margin: 30px auto;
+                  padding: 0 20px;
+                  display: grid;
+                  grid-template-columns: 1fr 300px;
+                  gap: 30px;
+            }
+
+            /* Main Content */
+            .main-content {
+                  background-color: #fff;
+            }
+
+            /* Post */
+            .post {
+                  padding: 40px;
+                  background-color: #fff;
+            }
+
+            .post-title {
+                  font-size: 32px;
+                  color: #333;
+                  margin-bottom: 15px;
+                  line-height: 1.3;
+            }
+
+            .post-meta {
+                  color: #999;
+                  font-size: 13px;
+                  margin-bottom: 25px;
+                  display: flex;
+                  gap: 15px;
+                  padding-bottom: 15px;
+                  border-bottom: 1px solid #eee;
+            }
+
+            .post-meta span {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+            }
+
+            .post-image {
+                  width: 100%;
+                  height: 450px;
+                  background-color: #e0e0e0;
+                  margin-bottom: 30px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #999;
+                  font-size: 14px;
+            }
+
+            .post-content {
+                  color: #444;
+                  line-height: 1.8;
+                  font-size: 16px;
+            }
+
+            .post-content h2 {
+                  font-size: 24px;
+                  margin-top: 30px;
+                  margin-bottom: 15px;
+                  color: #333;
+            }
+
+            .post-content h3 {
+                  font-size: 20px;
+                  margin-top: 25px;
+                  margin-bottom: 12px;
+                  color: #333;
+            }
+
+            .post-content p {
+                  margin-bottom: 20px;
+                  text-align: justify;
+            }
+
+            .post-content ul,
+            .post-content ol {
+                  margin-left: 30px;
+                  margin-bottom: 20px;
+            }
+
+            .post-content li {
+                  margin-bottom: 8px;
+            }
+
+            .post-content blockquote {
+                  border-left: 4px solid #2196F3;
+                  padding-left: 20px;
+                  margin: 20px 0;
+                  font-style: italic;
+                  color: #666;
+            }
+
+            .post-tags {
+                  margin-top: 30px;
+                  padding-top: 20px;
+                  border-top: 1px solid #eee;
+            }
+
+            .post-tags strong {
+                  color: #666;
+                  margin-right: 10px;
+            }
+
+            .tag {
+                  display: inline-block;
+                  background-color: #f0f0f0;
+                  color: #555;
+                  padding: 5px 12px;
+                  margin: 5px 5px 5px 0;
+                  border-radius: 3px;
+                  font-size: 13px;
+                  text-decoration: none;
+            }
+
+            .tag:hover {
+                  background-color: #2196F3;
+                  color: white;
+            }
+
+            .post-share {
+                  margin-top: 20px;
+                  padding-top: 20px;
+                  border-top: 1px solid #eee;
+            }
+
+            .post-share strong {
+                  color: #666;
+                  margin-right: 10px;
+            }
+
+            .share-button {
+                  display: inline-block;
+                  padding: 8px 15px;
+                  margin: 5px 5px 5px 0;
+                  border-radius: 3px;
+                  text-decoration: none;
+                  color: white;
+                  font-size: 13px;
+            }
+
+            .share-facebook {
+                  background-color: #3b5998;
+            }
+
+            .share-twitter {
+                  background-color: #1da1f2;
+            }
+
+            .share-whatsapp {
+                  background-color: #25d366;
+            }
+
+            .share-button:hover {
+                  opacity: 0.8;
+            }
+
+            /* Comments Section */
+            .comments-section {
+                  margin-top: 40px;
+                  padding: 30px;
+                  background-color: #f9f9f9;
+                  border-top: 2px solid #2196F3;
+            }
+
+            .comments-section h3 {
+                  font-size: 22px;
+                  margin-bottom: 20px;
+                  color: #333;
+            }
+
+            .comment-form textarea {
+                  width: 100%;
+                  padding: 12px;
+                  border: 1px solid #ddd;
+                  border-radius: 3px;
+                  font-family: Arial, sans-serif;
+                  font-size: 14px;
+                  margin-bottom: 10px;
+                  resize: vertical;
+            }
+
+            .comment-form input {
+                  width: 100%;
+                  padding: 10px;
+                  border: 1px solid #ddd;
+                  border-radius: 3px;
+                  margin-bottom: 10px;
+                  font-size: 14px;
+            }
+
+            .comment-form button {
+                  background-color: #2196F3;
+                  color: white;
+                  padding: 10px 25px;
+                  border: none;
+                  border-radius: 3px;
+                  cursor: pointer;
+                  font-size: 14px;
+            }
+
+            .comment-form button:hover {
+                  background-color: #1976D2;
+            }
+
+            /* Sidebar */
+            .sidebar {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+            }
+
+            .widget {
+                  background-color: #fff;
+                  padding: 20px;
+                  border: 1px solid #ddd;
+            }
+
+            .widget-title {
+                  font-size: 18px;
+                  margin-bottom: 15px;
+                  padding-bottom: 10px;
+                  border-bottom: 2px solid #2196F3;
+                  color: #333;
+            }
+
+            .widget ul {
+                  list-style: none;
+            }
+
+            .widget li {
+                  padding: 8px 0;
+                  border-bottom: 1px solid #eee;
+            }
+
+            .widget li:last-child {
+                  border-bottom: none;
+            }
+
+            .widget a {
+                  color: #555;
+                  text-decoration: none;
+                  font-size: 14px;
+            }
+
+            .widget a:hover {
+                  color: #2196F3;
+            }
+
+            .popular-post {
+                  display: flex;
+                  gap: 10px;
+                  padding: 10px 0;
+                  border-bottom: 1px solid #eee;
+            }
+
+            .popular-post:last-child {
+                  border-bottom: none;
+            }
+
+            .popular-post-thumb {
+                  width: 80px;
+                  height: 60px;
+                  background-color: #e0e0e0;
+                  flex-shrink: 0;
+            }
+
+            .popular-post-info h4 {
+                  font-size: 14px;
+                  margin-bottom: 5px;
+            }
+
+            .popular-post-info h4 a {
+                  color: #333;
+                  text-decoration: none;
+            }
+
+            .popular-post-info h4 a:hover {
+                  color: #2196F3;
+            }
+
+            .popular-post-date {
+                  font-size: 12px;
+                  color: #999;
+            }
+
+            /* Search Box */
+            .search-box {
+                  display: flex;
+                  margin-bottom: 15px;
+            }
+
+            .search-box input {
+                  flex: 1;
+                  padding: 10px;
+                  border: 1px solid #ddd;
+                  font-size: 14px;
+            }
+
+            .search-box button {
+                  padding: 10px 20px;
+                  background-color: #2196F3;
+                  color: white;
+                  border: none;
+                  cursor: pointer;
+                  font-size: 14px;
+            }
+
+            .search-box button:hover {
+                  background-color: #1976D2;
+            }
+
+            /* Footer */
+            footer {
+                  background-color: #333;
+                  color: #fff;
+                  text-align: center;
+                  padding: 20px;
+                  margin-top: 40px;
+            }
+
+            footer p {
+                  font-size: 14px;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                  .container {
+                        grid-template-columns: 1fr;
+                  }
+
+                  nav ul {
+                        flex-direction: column;
+                        gap: 10px;
+                  }
+
+                  .post {
+                        padding: 20px;
+                  }
+
+                  .post-image {
+                        height: 250px;
+                  }
+
+                  .blog-title {
+                        font-size: 24px;
+                  }
+
+                  .post-title {
+                        font-size: 24px;
+                  }
+            }
+      </style>
+</head>
+
+<body>
+      <nav>
+            <div class="nav-content">
+                  <ul>
+                        <li><a href="">Beranda</a></li>
+                        <li><a href="">Tentang</a></li>
+                        <li><a href="">Artikel</a></li>
+                        <li><a href="">Kontak</a></li>
+                  </ul>
+            </div>
+      </nav>
+
+      <!-- Container -->
+      <div class="container">
+            <!-- Main Content -->
+            <main class="main-content">
+                  <!-- Single Full Post -->
+                  <article class="post">
+                        <h1 class="post-title">UKM Public Speaking UNUGIRI Gelar Workshop, Mahasiswa Antusias Asah Kemampuan Berbicara</h1>
+
+                        <div class="post-meta">
+                              <span>📅 28 Januari 2026</span>
+                              <span>👤 Admin</span>
+                              <span>🏷️ Kategori</span>
+                              <span>💬 0 Komentar</span>
+                        </div>
+
+                        <div class="post-image">
+                              <img src="img.jpeg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <div class="post-content">
+                              <p>Coach Alvin Khoiron Bekali Mahasiswa UNUGIRI Teknik Public Speaking dalam Workshop
+                                    Inspiratif
+
+                                    Bojonegoro, 25 Januari 2026 — Unit Kegiatan Mahasiswa (UKM) Public Speaking
+                                    Universitas Nahdlatul Ulama Sunan Giri (UNUGIRI) menyelenggarakan kegiatan Public
+                                    Speaking Skill Workshop di auditorium kampus, Minggu (25/1). Workshop tersebut
+                                    menghadirkan Coach Alvin Khoiron, M.Sos, Founder UIN Surabaya Public Speaking,
+                                    sebagai pemateri.
+
+                                    Dalam penyampaiannya, Alvin Khoiron memaparkan pentingnya kompetensi berbicara di
+                                    depan umum bagi mahasiswa sebagai bekal menghadapi tuntutan akademik dan
+                                    profesional. Materi yang diberikan meliputi teknik vokal, penguasaan audiens,
+                                    struktur penyampaian pesan, serta strategi mengatasi kecemasan saat berbicara.
+
+                                    Kegiatan yang diikuti ratusan mahasiswa dari berbagai program studi ini berlangsung
+                                    tertib dan interaktif. Peserta diberikan kesempatan melakukan praktik public
+                                    speaking untuk mengaplikasikan materi yang telah disampaikan.
+
+                                    Ketua UKM Public Speaking UNUGIRI, Salma Ari Nastiti menyampaikan bahwa workshop ini
+                                    merupakan upaya organisasi dalam meningkatkan kapasitas komunikasi mahasiswa melalui
+                                    pelatihan terarah dan berkelanjutan. Kegiatan ditutup dengan sesi dokumentasi
+                                    bersama narasumber dan peserta.</p>
+
+                              <!-- Tags -->
+                              <div class="post-tags">
+                                    <strong>Tags:</strong>
+                                    <a href="#" class="tag">Tag1</a>
+                                    <a href="#" class="tag">Tag2</a>
+                                    <a href="#" class="tag">Tag3</a>
+                                    <a href="#" class="tag">Tag4</a>
+                              </div>
+
+                              <!-- Share Buttons -->
+                              <div class="post-share">
+                                    <strong>Bagikan:</strong>
+                                    <a href="#" class="share-button share-facebook">Facebook</a>
+                                    <a href="#" class="share-button share-twitter">Twitter</a>
+                                    <a href="#" class="share-button share-whatsapp">WhatsApp</a>
+                              </div>
+                  </article>
+
+                  <!-- Comments Section -->
+                  <div class="comments-section">
+                        <h3>Tinggalkan Komentar</h3>
+                        <form class="comment-form">
+                              <input type="text" placeholder="Nama Anda" required>
+                              <input type="email" placeholder="Email Anda" required>
+                              <textarea rows="5" placeholder="Tulis komentar Anda di sini..." required></textarea>
+                              <button type="submit">Kirim Komentar</button>
+                        </form>
+                  </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                  <!-- Search Widget -->
+                  <div class="widget">
+                        <h3 class="widget-title">Cari Artikel</h3>
+                        <div class="search-box">
+                              <input type="text" placeholder="Cari artikel...">
+                              <button>Cari</button>
+                        </div>
+                  </div>
+
+
+                  <!-- Categories Widget -->
+                  <div class="widget">
+                        <h3 class="widget-title">Kategori</h3>
+                        <ul>
+                              <li><a href="#">Teknologi (5)</a></li>
+                              <li><a href="#">Lifestyle (8)</a></li>
+                              <li><a href="#">Bisnis (3)</a></li>
+                              <li><a href="#">Pendidikan (6)</a></li>
+                              <li><a href="#">Travel (4)</a></li>
+                        </ul>
+                  </div>
+
+                  <!-- Archive Widget -->
+                  <div class="widget">
+                        <h3 class="widget-title">Arsip</h3>
+                        <ul>
+                              <li><a href="#">Januari 2026 (3)</a></li>
+                              <li><a href="#">Desember 2025 (5)</a></li>
+                              <li><a href="#">November 2025 (7)</a></li>
+                              <li><a href="#">Oktober 2025 (4)</a></li>
+                        </ul>
+                  </div>
+
+                  <!-- About Widget -->
+                  <div class="widget">
+                        <h3 class="widget-title">Tentang Blog</h3>
+                        <p style="font-size: 14px; color: #555; line-height: 1.6;">
+                              Blog ini berisi berbagai artikel menarik seputar teknologi, lifestyle, dan berbagai topik
+                              lainnya. Kunjungi terus untuk mendapatkan update terbaru!
+                        </p>
+                  </div>
+            </aside>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+            <p>&copy; 2026 Blog Saya. All Rights Reserved.</p>
+      </footer>
+</body>
+
+</html>
